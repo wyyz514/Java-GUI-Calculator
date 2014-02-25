@@ -32,8 +32,8 @@ public class Logic {
 	}
 	private void addition(int firstNumber, int secondNumber,JTextField field)
 	{
-		int result = firstNumber + secondNumber;
-		field.setText(new Integer(result).toString());
-		System.out.println("This is what is in the field: "+field.getText());
+		int sum = firstNumber + secondNumber;
+		String result = new Integer(sum).toString();
+		field.setText(result);
 	}
 }

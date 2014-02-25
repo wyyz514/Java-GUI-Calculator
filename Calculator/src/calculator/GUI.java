@@ -181,14 +181,12 @@ public class GUI extends JPanel implements ActionListener{
 				if(!arg0.getActionCommand().toString().equals("="))
 				{
 					firstNumber = Integer.parseInt(field.getText());
-					operation = arg0.getActionCommand();
 					field.setText("");
 					System.out.println(arg0.getActionCommand());
 				}
 				else
 				{
 					secondNumber = Integer.parseInt(field.getText());
-					System.out.println(secondNumber);
 					logic.solve(firstNumber,secondNumber,operation,field);
 				}
 			}
