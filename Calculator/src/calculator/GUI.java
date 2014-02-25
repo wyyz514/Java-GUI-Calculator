@@ -39,6 +39,9 @@ public class GUI extends JPanel implements ActionListener{
 	private JPanel calcBody;
 	private Border blackLine;
 	private Logic logic;
+	private int firstNumber;
+	private int secondNumber;
+	private String operation;
 	
 	public GUI()
 	{
@@ -175,7 +178,19 @@ public class GUI extends JPanel implements ActionListener{
 			}
 			catch(NumberFormatException e)
 			{
-				field.setText("");
+				if(!arg0.getActionCommand().toString().equals("="))
+				{
+					firstNumber = Integer.parseInt(field.getText());
+					operation = arg0.getActionCommand();
+					field.setText("");
+					System.out.println(arg0.getActionCommand());
+				}
+				else
+				{
+					secondNumber = Integer.parseInt(field.getText());
+					System.out.println(secondNumber);
+					logic.solve(firstNumber,secondNumber,operation,field);
+				}
 			}
 		}
 	}

@@ -18,4 +18,22 @@ public class Logic {
 		String newText = Integer.toString(newNumber);
 		field.setText(newText);
 	}
+	
+	//selects operation and calls relevant method
+	public void solve(int firstNumber,int secondNumber,String operation,JTextField field)
+	{
+		switch(operation)
+		{
+		case "+":
+			addition(firstNumber,secondNumber,field);
+			break;
+		
+		}
+	}
+	private void addition(int firstNumber, int secondNumber,JTextField field)
+	{
+		int result = firstNumber + secondNumber;
+		field.setText(new Integer(result).toString());
+		System.out.println("This is what is in the field: "+field.getText());
+	}
 }
