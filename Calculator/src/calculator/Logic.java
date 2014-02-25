@@ -27,13 +27,21 @@ public class Logic {
 		case "+":
 			addition(firstNumber,secondNumber,field);
 			break;
-		
+		case "-":
+			subtraction(firstNumber,secondNumber,field);
+			break;
 		}
 	}
 	private void addition(int firstNumber, int secondNumber,JTextField field)
 	{
 		int sum = firstNumber + secondNumber;
 		String result = new Integer(sum).toString();
+		field.setText(result);
+	}
+	private void subtraction(int firstNumber, int secondNumber, JTextField field)
+	{
+		int difference = firstNumber - secondNumber;
+		String result = new Integer(difference).toString();
 		field.setText(result);
 	}
 }
