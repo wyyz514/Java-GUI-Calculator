@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
+import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -76,6 +77,7 @@ public class GUI extends JPanel implements ActionListener{
 		
 		//first row
 		seven = new JButton("7");
+		add(Box.createHorizontalStrut(5));
 		buttonPanel.add(seven);
 		buttonList.add(seven);
 		

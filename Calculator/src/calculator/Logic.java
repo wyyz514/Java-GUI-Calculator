@@ -30,6 +30,13 @@ public class Logic {
 		case "-":
 			subtraction(firstNumber,secondNumber,field);
 			break;
+		case "*":
+			multiplication(firstNumber,secondNumber,field);
+			break;
+		case "/":
+			division(firstNumber,secondNumber,field);
+			break;
+			
 		}
 	}
 	private void addition(int firstNumber, int secondNumber,JTextField field)
@@ -42,6 +49,18 @@ public class Logic {
 	{
 		int difference = firstNumber - secondNumber;
 		String result = new Integer(difference).toString();
+		field.setText(result);
+	}
+	private void multiplication(int firstNumber, int secondNumber, JTextField field)
+	{
+		int product = firstNumber * secondNumber;
+		String result = new Integer(product).toString();
+		field.setText(result);
+	}
+	private void division(int firstNumber, int secondNumber, JTextField field)
+	{
+		int quotient = firstNumber / secondNumber;
+		String result = new Integer(quotient).toString();
 		field.setText(result);
 	}
 }
